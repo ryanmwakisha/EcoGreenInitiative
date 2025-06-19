@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGreen Initiative</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home-section" class="nav-link" data-section="home-section">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#login-section" class="nav-link" data-section="login-section">Login</a></li>
+                    <li><a href="#signup-section" class="nav-link" data-section="signup-section">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Home Section -->
+            <section id="home-section">
+                <h1>Welcome to EcoGreen Initiative</h1>
+                <p>Our mission is to promote environmental sustainability through various initiatives and community involvement.</p>
+                <h2>Our Services</h2>
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Tree Planting</td>
+                        <td>Join our tree planting events to contribute to reforestation efforts.</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Recycling Programs</td>
+                        <td>Participate in our recycling programs to reduce waste and promote recycling.</td>
+                        <td>$67</td>
+                    </tr>
+                    <tr>
+                        <td>Community Education</td>
+                        <td>Attend our workshops and seminars on sustainable living practices.</td>
+                        <td>$50</td> <!-- Added missing price -->
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Login Section (initially hidden) -->
+            <section id="login-section" class="text-center" style="display: none;">
+                <h1>Login to Your Account</h1>
+                <p>Enter your credentials to access your dashboard.</p>
+                <form id="loginForm">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" required placeholder="your.email@example.com">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required placeholder="********">
+                    <input type="submit" value="Login">
+                </form>
+                <div id="loginMessage" class="form-message"></div>
+                <p>Don't have an account? <a href="#signup-section" class="nav-link" data-section="signup-section">Sign up here</a>.</p>
+            </section>
+
+            <!-- Sign Up Section (initially hidden) -->
+            <section id="signup-section" class="text-center" style="display: none;">
+                <h1>Create Your Account</h1>
+                <p>Join the EcoGreen Initiative today!</p>
+                <form id="signupForm">
+                    <label for="signup-name">Full Name:</label>
+                    <input type="text" id="signup-name" name="name" required placeholder="John Doe">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="email" required placeholder="your.email@example.com">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="password" required placeholder="********">
+                    <label for="signup-confirm-password">Confirm Password:</label>
+                    <input type="password" id="signup-confirm-password" name="confirm_password" required placeholder="********">
+                    <input type="submit" value="Sign Up">
+                </form>
+                <div id="signupMessage" class="form-message"></div>
+                <p>Already have an account? <a href="#login-section" class="nav-link" data-section="login-section">Login here</a>.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 EcoGreen Initiative. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to hide all main sections
+            function hideAllSections() {
+                const sections = document.querySelectorAll('main section');
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+            }
+
+            // Function to show a specific section
+            function showSection(sectionId) {
+                hideAllSections();
+                const sectionToShow = document.getElementById(sectionId);
+                if (sectionToShow) {
+                    sectionToShow.style.display = 'block';
+                }
+            }
+
+            // Event listeners for navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    // Only prevent default for internal links that toggle sections
+                    if (this.getAttribute('href').startsWith('#')) {
+                        event.preventDefault();
+                        const targetSectionId = this.getAttribute('data-section');
+                        showSection(targetSectionId);
+                    }
+                });
+            });
+
+            // Handle initial URL hash to show specific section on load
+            const initialHash = window.location.hash.substring(1);
+            if (initialHash && document.getElementById(initialHash)) {
+                showSection(initialHash);
+            } else {
+                showSection('home-section'); // Show home section by default
+            }
+
+            // Login Form Submission
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+                const messageDiv = document.getElementById('loginMessage');
+
+                if (email && password) {
+                    messageDiv.textContent = 'Login attempt successful (frontend only).';
+                    messageDiv.className = 'form-message success';
+                    messageDiv.style.display = 'block';
+                } else {
+                    messageDiv.textContent = 'Please enter both email and password.';
+                    messageDiv.className = 'form-message error';
+                    messageDiv.style.display = 'block';
+                }
+            });
+
+            // Sign Up Form Submission
+            document.getElementById('signupForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+                const name = document.getElementById('signup-name').value;
+                const email = document.getElementById('signup-email').value;
+                const password = document.getElementById('signup-password').value;
+                const confirmPassword = document.getElementById('signup-confirm-password').value;
+                const messageDiv = document.getElementById('signupMessage');
+
+                if (password !== confirmPassword) {
+                    messageDiv.textContent = 'Passwords do not match.';
+                    messageDiv.className = 'form-message error';
+                    messageDiv.style.display = 'block';
+                    return;
+                }
+
+                if (name && email && password) {
+                    messageDiv.textContent = 'Sign up successful (frontend only). You can now log in.';
+                    messageDiv.className = 'form-message success';
+                    messageDiv.style.display = 'block';
+                    // Optionally, clear the form or redirect to login after successful signup
+                    // document.getElementById('signupForm').reset();
+                    // showSection('login-section');
+                } else {
+                    messageDiv.textContent = 'Please fill in all fields.';
+                    messageDiv.className = 'form-message error';
+                    messageDiv.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
