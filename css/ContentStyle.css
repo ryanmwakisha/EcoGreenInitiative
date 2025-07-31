@@ -1,0 +1,25 @@
+/* Main Content Styles */
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h1 {
+    color: #264653;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: #2a9d8f;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}

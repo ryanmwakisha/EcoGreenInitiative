@@ -1,0 +1,24 @@
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: relative; /* Changed to relative so it doesn't overlap content */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer small a {
+    color: #f4a261;
+    text-decoration: none;
+    margin: 0 0.5em;
+}
+
+footer small a:hover {
+    text-decoration: underline;
+}
