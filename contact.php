@@ -36,8 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="signup.php">Sign Up</a></li>
             </ul>
         </nav>
     </header>
