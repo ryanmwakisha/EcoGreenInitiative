@@ -17,7 +17,6 @@ require_once 'db_connect.php';
                 <li><a href="index.php">Home</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -34,6 +33,7 @@ require_once 'db_connect.php';
                 <button type="submit">Login</button>
             </form>
             <p>Don't have an account? <a href="signup.php">Sign up here</a>.</p>
+            <p><a href = "logout.php">Log out here</a>.</p>
         </section>
     </main>
 
