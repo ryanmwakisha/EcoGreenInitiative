@@ -21,8 +21,6 @@ require_once 'db_connect.php';
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="signup.php">Sign Up</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
@@ -37,20 +35,20 @@ require_once 'db_connect.php';
         <section>
             <h2>Annual Tree Planting Day</h2>
             <p>Come and be a part of our Annual Tree Planting Day to help reforest our local areas.</p>
-            <p><a href="#">Learn more about Arbor Day celebrations</a>.</p>
+            <p><a href="css\images\tree-planting.jpg">Learn more about Arbor Day celebrations</a>.</p>
         </section>
 
         <section>
             <h2>Recycling Workshop</h2>
             <p>Attend our Recycling Workshop to learn effective recycling practices and reduce waste.</p>
-            <p><a href="#">Discover the basics of recycling</a>.</p>
+            <p><a href="css\images\recycling-programs.jpg">Discover the basics of recycling</a>.</p>
             <p>There is a lot to learn in these workshops so be sure to join us and enjoy the day.</p>
         </section>
 
         <section>
             <h2>Sustainable Living Seminar</h2>
             <p>Join our seminar on sustainable living and learn practical ways to live sustainably.</p>
-            <p><a href="#">Find more resources on sustainable living</a>.</p>
+            <p><a href="css\images\event-2.jpg">Find more resources on sustainable living</a>.</p>
         </section>
     </main>
 
