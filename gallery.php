@@ -39,23 +39,23 @@ require_once 'db_connect.php';
                 <figcaption>Community members join hands to reforest the area.</figcaption>
             </figure>
             <figure>
-                <img src="#" alt="Participants sorting recyclables during our recycling workshop.">
+                <img src="css\images\recycling-1.jpg" alt="Participants sorting recyclables during our recycling workshop.">
                 <figcaption>Participants sorting recyclables during our recycling workshop.</figcaption>
             </figure>
             <figure>
-                <img src="#" alt="Learning the importance of recycling in reducing waste.">
+                <img src="css\images\recycling-2.jpg" alt="Learning the importance of recycling in reducing waste.">
                 <figcaption>Learning the importance of recycling in reducing waste.</figcaption>
             </figure>
             <figure>
-                <img src="#" alt="Educational seminar on sustainable living practices.">
+                <img src="css\images\workshop-2.jpg" alt="Educational seminar on sustainable living practices.">
                 <figcaption>Educational seminar on sustainable living practices.</figcaption>
             </figure>
             <figure>
-                <img src="#" alt="Interactive session on eco-friendly solutions.">
+                <img src="css\images\community-education-2.jpg" alt="Interactive session on eco-friendly solutions.">
                 <figcaption>Interactive session on eco-friendly solutions.</figcaption>
             </figure>
             <figure>
-                <img src="#" alt="Annual EcoGreen fair showcasing sustainable products.">
+                <img src="css\images\community-education-1.jpg" alt="Annual EcoGreen fair showcasing sustainable products.">
                 <figcaption>Annual EcoGreen fair showcasing sustainable products.</figcaption>
             </figure>
             <figure>
@@ -63,11 +63,11 @@ require_once 'db_connect.php';
                 <figcaption>Guest speakers sharing insights on environmental conservation.</figcaption>
             </figure>
             <figure>
-                <img src="#" alt="Hands-on workshop teaching composting techniques.">
+                <img src="css\images\workshop-1.jpg" alt="Hands-on workshop teaching composting techniques.">
                 <figcaption>Hands-on workshop teaching composting techniques.</figcaption>
             </figure>
             <figure>
-                <img src="#" alt="Community members learning about renewable energy sources.">
+                <img src="css\images\workshop-2.jpg" alt="Community members learning about renewable energy sources.">
                 <figcaption>Community members learning about renewable energy sources.</figcaption>
             </figure>
         </section>
