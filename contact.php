@@ -9,10 +9,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['message'];
 
     try {
-        $stmt = $pdo->prepare("INSERT INTO contact_messages (name, email, message) VALUES (:name, :email, :message)");
-        $stmt->execute(['name' => $name, 'email' => $email, 'message' => $message]);
-        $success = "Message sent successfully!";
-    } catch (PDOException $e) {
+        // Using MySQLi prepared statement
+        $stmt = $conn->prepare("INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $email, $message);
+        
+        if ($stmt->execute()) {
+            $success = "Message sent successfully!";
+        } else {
+            $error = "Error: " . $stmt->error;
+        }
+        $stmt->close();
+    } catch (Exception $e) {
         $error = "Error: " . $e->getMessage();
     }
 }
@@ -45,8 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <section>
             <h1>Contact Us</h1>
             <p>We'd love to hear from you! Contact us through the form below or reach out to us on social media.</p>
-            <?php if (isset($success)) echo "<p>$success</p>"; ?>
-            <?php if (isset($error)) echo "<p>$error</p>"; ?>
+            <?php if (isset($success)) echo "<p style='color: green;'>$success</p>"; ?>
+            <?php if (isset($error)) echo "<p style='color: red;'>$error</p>"; ?>
             <form action="contact.php" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br>
