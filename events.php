@@ -35,7 +35,7 @@ require_once 'db_connect.php';
         <section>
             <h2>Annual Tree Planting Day</h2>
             <p>Come and be a part of our Annual Tree Planting Day to help reforest our local areas.</p>
-            <p><a href="css\images\tree-planting.jpg">Learn more about Arbor Day celebrations</a>.</p>
+            <p><a href="css\images\tree-planting.jpg">Learn more about Labor Day celebrations</a>.</p>
         </section>
 
         <section>
