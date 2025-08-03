@@ -4,9 +4,9 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em;
-    position: relative; /* Changed to relative so it doesn't overlap content */
+    position: relative; 
     width: 100%;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    box-sizing: border-box; 
 }
 
 footer p {
